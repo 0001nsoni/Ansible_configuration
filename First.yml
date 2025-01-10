@@ -1,0 +1,19 @@
+---
+  - name: play 1st
+    hosts: proud
+    tasks:
+
+          - name: to create a directory
+            file:
+                  path: /tmp/data
+                  state: directory
+
+          - name: to create a file
+            file:
+                  path: /tmp/data/intro
+                  state: touch
+
+          - name: to insert my name
+            lineinfile:
+                  path: /tmp/data/intro
+                  line: "Neeraj Soni"
